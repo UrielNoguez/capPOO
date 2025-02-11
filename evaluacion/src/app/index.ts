@@ -1,3 +1,6 @@
+/*
+*Archivo de prueba
+*/
 import { Inventario } from "./models/inventario";
 import { Producto } from "./models/producto";
 import { GestionCrud } from "./services/impl/gestion";
