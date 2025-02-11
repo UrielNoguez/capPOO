@@ -85,5 +85,7 @@ class Cat{
 var oscar:Cat=new Cat("Oscar","macho",3,7,"Marron","rayada");
 var luna:Cat=new Cat("Luna","hembra",2,5,"gris","lisa");
 
+console.log(oscar.age)
+
 console.log(oscar);
 console.log(luna)

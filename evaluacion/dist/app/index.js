@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const inventario_1 = require("./models/inventario");
+const producto_1 = require("./models/producto");
+const gestion_1 = require("./services/impl/gestion");
+var producto1 = new producto_1.Producto("cuaderno", 25, 100);
+var producto2 = new producto_1.Producto("pluma", 25, 100);
+var producto3 = new producto_1.Producto("calculadora", 25, 100);
+var inventario = new inventario_1.Inventario([producto1, producto2, producto3]);
+var operaciones = new gestion_1.GestionCrud(inventario);
+console.log(operaciones.consultarInventario());
+operaciones.agregarProducto(new producto_1.Producto("libro", 23, 12));
+console.log(operaciones.consultarInventario());
