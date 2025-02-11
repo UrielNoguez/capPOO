@@ -49,7 +49,7 @@ export class GestionCrud <T extends {nombreProducto:string,cantidadProducto:numb
     }
     ventaProducto(producto: T,cantidad:number): string {
         const productoEncontrado=this.buscarProducto(producto);
-        if(productoEncontrado!=-1){
+        if(productoEncontrado!=-1 && (producto.cantidadProducto>=cantidad)){
             this.modificarProducto(producto,["cantidadProducto"],[String(producto.cantidadProducto-cantidad)]);
             return "Compra exitosa";
         }
